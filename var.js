@@ -1,21 +1,30 @@
 // ARRAY
 const namaSiswa=["Paijo","Joko","Tono"];
 
-namaSiswa.forEach(function (item,index,Array){
-        console.log(item,index);
-});
+// namaSiswa.forEach(function (item,index,Array){
+//          console.log(item,index);
+// });
 
 namaSiswa.push("devi");
+
+//reduce seperti foreach dan di return
+console.log(
+namaSiswa.reduce(function(acc,siswa,ke){
+        acc[siswa] = `Siswa ke ${ke +1}`;
+        return acc;
+},{}) //ubah menjadi object
+);
+
+// console.log(namaSiswa);
+// const indexJoko=namaSiswa.indexOf("Joko");
+// // index array ke berapa
+// namaSiswa.splice(indexJoko,1);
+// console.log(namaSiswa);
+
 // // menghaspus di akhir
 // namaSiswa.pop();
 // //menghapus di awal
 // namaSiswa.shift();
-
-console.log(namaSiswa);
-
-// index array ke berapa
-console.log(namaSiswa.indexOf("Joko"));
-
 
 // tipe data dasar
 // let iceCream=5;
